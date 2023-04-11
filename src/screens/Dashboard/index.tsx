@@ -7,6 +7,7 @@ import {
   User,
   UserGreeting,
   UserName,
+  Icon,
 } from './styles'
 
 export function Dashboard() {
@@ -23,6 +24,7 @@ export function Dashboard() {
             </User>
           </UserInfo>
 
+          <Icon name="power" />
         </UserWrapper>
       </Header>
 
