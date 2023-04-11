@@ -46,7 +46,7 @@ export const User = styled.View`
 export const UserGreeting = styled.Text`
   color: ${({ theme }) => theme.colors.shape };
   font-size: ${RFValue(18)}px;
-  font-family: ${({ theme }) => theme.fonts.regurlar };
+  font-family: ${({ theme }) => theme.fonts.regular };
 `
 
 export const UserName = styled.Text`
@@ -59,3 +59,9 @@ export const Icon = styled(Feather)`
   color: ${({ theme }) => theme.colors.secondary};
   font-size: ${RFValue(24)}px;
 `
+
+export const HighlightCards = styled.ScrollView.attrs({
+  horizontal: true,
+  showsHorizontalScrollIndicator: false,
+  contentContainerStyle: { paddingHorizontal: 24 },
+})``;
