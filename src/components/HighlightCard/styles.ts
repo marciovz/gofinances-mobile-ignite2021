@@ -4,7 +4,6 @@ import { Feather } from '@expo/vector-icons';
 
 export const Container = styled.View`
   width: ${RFValue(300)}px;
-  height: 300px;
   padding: 19px 23px ${RFValue(42)}px;
   margin-right: 16px;
 
