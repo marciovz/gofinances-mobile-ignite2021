@@ -6,7 +6,7 @@ export const Container = styled.TouchableOpacity.attrs({
   activeOpacity: 0.7
 })`
   background-color: ${({ theme }) => theme.colors.shape};
-  flex-direction: rew;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
