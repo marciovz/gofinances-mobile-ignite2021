@@ -1,3 +1,4 @@
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { ThemeProvider } from 'styled-components';
 import AppLoading from 'expo-app-loading';
 import {
@@ -7,7 +8,7 @@ import {
   Poppins_700Bold,
 } from "@expo-google-fonts/poppins";
 
-import { CategorySelect } from './src/screens/CategorySelect';
+import { Register } from './src/screens/Register';
 
 import theme from './src/global/styles/theme';
 
@@ -19,8 +20,10 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <CategorySelect />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={theme}>
+        <Register />
+      </ThemeProvider>
+    </GestureHandlerRootView>
   )
 }
