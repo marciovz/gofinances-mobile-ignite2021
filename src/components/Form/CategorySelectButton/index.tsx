@@ -1,6 +1,7 @@
+
 import { Container, Category, Icon } from "./styles";
 
-interface Props {
+interface Props{
   title: string;
   onPress: () => void;
 }

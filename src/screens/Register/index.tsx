@@ -3,9 +3,11 @@ import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup'
 
+import { TouchableWithoutFeedback } from 'react-native-gesture-handler';
+
 import { 
-  Modal, 
-  TouchableWithoutFeedback, 
+  Modal,  
+  
   Keyboard,
   Alert, 
 } from "react-native";
@@ -83,7 +85,11 @@ export function Register() {
   }
 
   return (
-    <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
+    <TouchableWithoutFeedback 
+      style={{ flex: 1 }}
+      containerStyle={{ flex: 1 }}
+      onPress={Keyboard.dismiss}
+    >
       <Container>
         <Header>
           <Title>Title</Title>
@@ -117,7 +123,7 @@ export function Register() {
               />
 
               <TransactionTypeBotton
-                type="up"
+                type="down"
                 title="Outcome"
                 onPress={() => handleTransactionsTypeSelect('down')}
                 isActive={transactionType === 'down'}
