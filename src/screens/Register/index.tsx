@@ -121,7 +121,7 @@ export function Register() {
     >
       <Container>
         <Header>
-          <Title>Title</Title>
+          <Title>Cadastro</Title>
         </Header>
 
         <Form>
