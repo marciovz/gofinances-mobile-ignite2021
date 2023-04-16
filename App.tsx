@@ -12,7 +12,7 @@ import {
 } from "@expo-google-fonts/poppins";
 
 
-import { AuthContext } from './src/contexts/AuthContext';
+import { AuthProvider } from './src/hooks/auth';
 import { AppRoutes } from './src/routes/app.routes';
 import { SignIn } from './src/screens/SignIn';
 
@@ -35,9 +35,9 @@ export default function App() {
             translucent
           />
 
-          <AuthContext.Provider value={[]}>
+          <AuthProvider>
             <SignIn />
-          </AuthContext.Provider>
+          </AuthProvider>
         </NavigationContainer>
     </ThemeProvider>
   </GestureHandlerRootView>
