@@ -13,6 +13,7 @@ import {
 
 
 import { AppRoutes } from './src/routes/app.routes';
+import { SignIn } from './src/screens/SignIn';
 
 import theme from './src/global/styles/theme';
 
@@ -32,7 +33,7 @@ export default function App() {
             backgroundColor="transparent"
             translucent
           />
-          <AppRoutes />
+          <SignIn />
         </NavigationContainer>
     </ThemeProvider>
   </GestureHandlerRootView>
