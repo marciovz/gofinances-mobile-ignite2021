@@ -15,10 +15,13 @@
     "@react-navigation/bottom-tabs": "^6.5.7",
     "@react-navigation/native": "^6.1.6",
     "@types/react": "~18.0.27",
+    "babel-plugin-inline-dotenv": "^1.7.0",
     "date-fns": "^2.29.3",
     "expo": "~48.0.10",
     "expo-app-loading": "^2.1.1",
+    "expo-auth-session": "~4.0.3",
     "expo-font": "~11.1.1",
+    "expo-random": "~13.1.1",
     "expo-splash-screen": "~0.18.1",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
@@ -35,9 +38,7 @@
     "styled-components": "^5.3.9",
     "typescript": "^4.9.4",
     "victory-native": "^36.6.8",
-    "yup": "^1.1.0",
-    "expo-auth-session": "~4.0.3",
-    "expo-random": "~13.1.1"
+    "yup": "^1.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",

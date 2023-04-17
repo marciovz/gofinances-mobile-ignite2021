@@ -25,6 +25,8 @@ interface AuthorizationResponse {
   type: string;
 }
 
+const { CLIENT_ID, REDIRECT_URI } = process.env;
+
 const AuthContext = createContext({} as IAuthContextData);
 
 function AuthProvider({ children }: AuthProviderProps) {
@@ -32,8 +34,16 @@ function AuthProvider({ children }: AuthProviderProps) {
 
   async function signInWithGoogle() {
     try {
-      const CLIENT_ID = '941372899446-tq0hj38ndsc1dpf0807std6kobccv6hd.apps.googleusercontent.com';
-      const REDIRECT_URI = 'https://auth.expo.io/@marciovz/gofinances';
+        // burlando o bug do auth google
+        setUser({
+          id: '125684455124514546454',
+          email: 'lico@email.com',
+          name: 'Lico',
+          photo: 'https://github.com/marciovz.png',
+        })
+
+        return
+
       const RESPONSE_TYPE = 'token';
       const SCOPE = encodeURI('profile email');
 
@@ -53,6 +63,7 @@ function AuthProvider({ children }: AuthProviderProps) {
           photo: userInfo.picture,
         })
       } else {
+
         console.log(type);
         Alert.alert('Ops, houve um problema no google');
       }
