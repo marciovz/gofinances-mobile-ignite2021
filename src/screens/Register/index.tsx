@@ -8,7 +8,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import uuid from 'react-native-uuid';
 import { useNavigation } from '@react-navigation/native';
 
-
+import { useAuth } from "../../hooks/auth";
 import { AppRoutesProps } from "../../routes/app.routes";
 
 import { InputForm } from "../../components/Form/InputForm";
@@ -51,6 +51,8 @@ export function Register() {
     name: 'Category',
   });
 
+  const { user } = useAuth();
+
   const navigation = useNavigation<AppRoutesProps>();
 
   const { control, handleSubmit, formState: { errors }, reset } = useForm<FormData>({
@@ -86,7 +88,7 @@ export function Register() {
     }
 
     try {
-      const dataKey = '@gofinances:transactions';
+      const dataKey = `@gofinances:transactions_user:${ user.id }`;
       
       const data = await AsyncStorage.getItem(dataKey);
       const currentData = data ? JSON.parse(data) : [];
