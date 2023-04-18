@@ -30,7 +30,8 @@ interface AuthorizationResponse {
   type: string;
 }
 
-const { CLIENT_ID, REDIRECT_URI } = process.env;
+const { CLIENT_ID } = process.env;
+const { REDIRECT_URI } = process.env;
 
 const AuthContext = createContext({} as IAuthContextData);
 
@@ -42,18 +43,7 @@ function AuthProvider({ children }: AuthProviderProps) {
 
   async function signInWithGoogle() {
     try {
-      // burlando o bug do auth google
-      const userLogged = {
-        id: '125684455124514546454',
-        email: 'lico@email.com',
-        name: 'Lico',
-        photo: 'https://github.com/marciovz.png',
-      }
-      setUser(userLogged);
-      await AsyncStorage.setItem('@gofinances:user', JSON.stringify(userLogged));
-      return
-      // fim do burlando o bug
-
+           
       const RESPONSE_TYPE = 'token';
       const SCOPE = encodeURI('profile email');
 
@@ -64,7 +54,6 @@ function AuthProvider({ children }: AuthProviderProps) {
       if(type === 'success') {
         const response = await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=${params.access_token}`);
         const userInfo = await response.json();
-        console.log(userInfo);
 
         const userLogged = {
           id: userInfo.id,
@@ -76,9 +65,8 @@ function AuthProvider({ children }: AuthProviderProps) {
         setUser(userLogged);
         await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged));
       } else {
-
         console.log(type);
-        Alert.alert('Ops, houve um problema no google');
+        Alert.alert('Ops, houve um problema na autenticação com o google');
       }
       
     } catch (error: any) {
