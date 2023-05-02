@@ -9,12 +9,6 @@
     "web": "expo start --web",
     "test": "jest"
   },
-  "jest": {
-    "preset": "jest-expo",
-    "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect"
-    ]
-  },
   "dependencies": {
     "@expo-google-fonts/poppins": "^0.2.3",
     "@hookform/resolvers": "^3.0.1",
