@@ -1,7 +1,7 @@
 import { StatusBar } from 'react-native';
 import { ThemeProvider } from 'styled-components';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-// import AppLoading from 'expo-app-loading';
+
 import {
   useFonts,
   Poppins_400Regular,
