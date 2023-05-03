@@ -41,7 +41,7 @@ describe('Register Screen', () => {
     const categoryModal = getByTestId('modal-category');
     const buttonCategory = getByTestId('button-category');
     fireEvent.press(buttonCategory);
-
+    
     expect(categoryModal.props.visible).toBeTruthy();
   })
 });
