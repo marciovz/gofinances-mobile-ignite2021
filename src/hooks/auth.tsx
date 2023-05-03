@@ -65,7 +65,6 @@ function AuthProvider({ children }: AuthProviderProps) {
         setUser(userLogged);
         await AsyncStorage.setItem(userStorageKey, JSON.stringify(userLogged));
       } else {
-        console.log(type);
         Alert.alert('Ops, houve um problema na autenticação com o google');
       }
       
