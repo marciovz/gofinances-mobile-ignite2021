@@ -68,12 +68,6 @@ export function Dashboard() {
     )
 
     return `${lastTransaction.getDate()} de ${lastTransaction.toLocaleString('pt-BR', { month: 'long'})}`
-    
-    Intl.DateTimeFormat('pt-BR', {
-      day: '2-digit',
-      month: '2-digit',
-      year: '2-digit',
-    }).format(new Date(lastTransaction));
   }
 
   async function loadTransactions() {
