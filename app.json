@@ -6,6 +6,18 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "androidStatusBar": {
+      "barStyle":"light-content",
+      "backgroundColor": "#5636D3",
+      "translucent": true
+    },
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#5636D3"
+    }
   }
+
 }
