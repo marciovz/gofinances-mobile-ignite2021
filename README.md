@@ -2,16 +2,16 @@
 
 ## Introdução
 
-GOFINANCES é um aplicativo para gerenciamento finaceiro de despesas, onde o usuário cadastra todas suas receitas e despesas por categorias e pode vusualizar seus gastos mensais graficamente.
+GOFINANCES é um aplicativo para gerenciamento financeiro de despesas, onde o usuário cadastra todas suas receitas e despesas por categorias e pode visualizar seus gastos mensais graficamente.
 
 É um projeto que possuí o intuíto de aplicar os conceitos aprendidos no módulo 1 do curso Ignite React Native da Rocketseat versão 2021.
 
 <div align="center">
-  <img alt="Todo Aplication" src="./assets/signing.jpeg" width="150px" />
-  <img alt="Todo Aplication" src="./assets/dashboard.jpeg" width="150px" />
-  <img alt="Todo Aplication" src="./assets/cadastrar.jpeg" width="150px" />
-  <img alt="Todo Aplication" src="./assets/categories.jpeg" width="150px" />
-  <img alt="Todo Aplication" src="./assets/grafics.jpeg" width="150px" />
+  <img alt="Todo Aplication" src="./.github/signing.jpeg" width="150px" />
+  <img alt="Todo Aplication" src="./.github/dashboard.jpeg" width="150px" />
+  <img alt="Todo Aplication" src="./.github/cadastrar.jpeg" width="150px" />
+  <img alt="Todo Aplication" src="./.github/categories.jpeg" width="150px" />
+  <img alt="Todo Aplication" src="./.github/grafics.jpeg" width="150px" />
 </div>
 
 ## Requisitos
